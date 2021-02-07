@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entryTitle }}
+{% endblock %}
+  {% block body %}
+       {{ Entry|safe }}
+        <a class="entry" href="/wiki/{{title}}/edit" role="button">Edit page </a>
+        {% csrf_token %}
+  {% endblock %}
